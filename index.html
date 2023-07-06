@@ -41,7 +41,6 @@
       background-color: transparent;
       padding-bottom: 60px;
     }
-
     .main {
       margin: 0 auto;
       width: 100%;
@@ -52,13 +51,14 @@
       color: #171a1b;
       padding: 24px;
     }
+    .body-header{
 
+    }
     .download {
       position: relative;
       text-align: center;
       font-size: 0;
     }
-
     .download .download-links {
       width: 100%;
       max-width: 300px;
@@ -66,7 +66,6 @@
       vertical-align: top;
       text-align: center;
     }
-
     .currentYear::after {
       content: attr(data-year);
     }
@@ -87,14 +86,17 @@
       padding: 4px;
       border-radius: 4px;
     }
-
+    .download-wrapper{
+      width: 100%;
+    }
     @media screen and (max-width: 600px) {
       .main {
         padding: 12px;
       }
 
       .button-wrapper {
-        flex-direction: column;
+        /* flex-direction: column; */
+
         padding: 0;
       }
 
@@ -103,16 +105,12 @@
       }
 
       .social-icons {
-        justify-content: center;
+        justify-content: flex-end;
         margin-top: 16px;
       }
 
       .button-wrapper td {
         width: 100%;
-      }
-
-      .currentYear {
-        display: none;
       }
     }
   </style>
@@ -133,18 +131,17 @@
       <!-- START EMAIL BODY -->
       <tr style="background: #FFF;">
         <td>
-          <table >
+          <table style="position: relative;">
             <tr>
               <td>
-                <table width="600px" style="background-color: #ffffff; border-radius: 10px 10px 0 0; padding: 48px 32px;">
-                  <tr style="position: relative;">
+                <table width="600px" style="position: relative; background-color: #ffffff; border-radius: 10px 10px 0 0; padding: 48px 32px;">
+                  <tr>
                     <!-- WELCOME HEADER -->
-                    <td>
+                    <td class="body-header">
                       <h1 style="color:#000929; font-size: 36px; font-style: normal; font-weight: 600; line-height: 44px; text-align: center; margin: 0 0 1rem; letter-spacing: -0.72px;">
-                        Welcome to Exampadi!</h1>
-                    </td>
-                    <td>
-                      <img src="assets/Group 5707.svg" alt="" style="position: absolute; bottom: 10px; right: 45px;">
+                        Welcome to Exampadi!
+                      </h1>
+                      <img src="assets/Group 5707.svg" alt="" style="position: absolute; top: 25px; right: 65px;">
                     </td>
                   </tr>
         
@@ -193,8 +190,8 @@
         <!--  DOWNLOAD OUR APP SECTION -->
         <tr>
           <td>
-            <table width="100%" style="text-align: center; background: #2F2D51; border-radius: 0 0 20px 20px; padding: 32px 24px;">
-              <tr>
+            <table width="100%" style="position: relative; text-align: center; background: #2F2D51; border-radius: 0 0 20px 20px; padding: 32px 24px;">
+              <tr style="position: relative;">
                 <td style="position: relative;">
                   <h1 style="color: #FFF; text-align: center; font-family: Public Sans; font-size: 16px; font-style: normal; font-weight: 500; line-height: 24px;">Download our app</h1>
                   <p style="color: #EDE9EE; text-align: center; font-family: Public Sans; font-size: 14px; font-style: normal; font-weight: 400; line-height: 20px;">Download our Mobile Application to enjoy the benefits to the Max.</p>
@@ -202,11 +199,10 @@
                   <img src="assets/Blue Star Outlined.svg" alt="" style="position: absolute; bottom: -25px; left: 45px;">
                 </td>
               </tr>
-              
               <!-- DOWNLOAD OUR APP BUTTON -->
               <tr>
                 <td>
-                  <table width="100%">
+                  <table width="100%" class="download-wrapper">
                     <tr class="button-wrapper">
                       <td class="download" width="50%">
                         <a href="#" style="display: inline-block; background: #0A0A0D; border-radius: 7px;">
@@ -239,19 +235,13 @@
                     <!-- SOCIAL ICONS -->
                     <tr>
                       <td>
-                        <table width="100%">
-                          <tr>
+                        <table width="100%" style="position: relative;">
+                          <tr style="position: relative;">
                             <td class="social-icons">
                               <a href="#" class="social-icon"><img src="assets/twitter.svg" alt="" width="18" height="21" title="Modern Logo"></a>
                               <a href="#" class="social-icon"><img src="assets/facebook.svg" alt="" width="18" height="21" title="Modern Logo"></a>
                               <a href="#" class="social-icon"><img src="assets/instagram.svg" alt="" width="18" height="21" title="Modern Logo"></a>
                             </td>
-                            <td class="social-icons">
-                            </td>
-                            <td class="social-icons">
-                            </td>
-                          </tr>
-                          <tr style="position: relative;">
                             <td>
                               <img src="assets/boy wearing glasses.svg" alt="" style="position: absolute; position: absolute; bottom: -32px; left: -24px; border-radius: 0 0 20px 20px;">
                             </td>
@@ -262,7 +252,6 @@
                   </table>
                 </td>
               </tr>
-              
               <tr>
               </tr>
             </table>
